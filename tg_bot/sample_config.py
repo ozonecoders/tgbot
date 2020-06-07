@@ -16,7 +16,7 @@ class Config(object):
     OWNER_USERNAME = os.environ['OWNER_USERNAME']
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = 'mysql://'+os.environ['username']+':'+os.environ['pw']+'@'+os.environ['hostname']+':'+os.environ['port']+'/'+os.environ['db_name']  # needed for any database modules
+    SQLALCHEMY_DATABASE_URI = sqlite:////tmp/test.db  # needed for any database modules
     MESSAGE_DUMP = None  # needed to make sure 'save from' messages persist
     LOAD = []
     # sed has been disabled after the discovery that certain long-running sed commands maxed out cpu usage
